@@ -4,9 +4,12 @@ import bcrypt from 'bcrypt';
 import User from '../models/User';
 
 const createAccount = async (req, res) => {
-  const { email, password } = req.body;
-  const hashed = bcrypt.hashSync(password, 10);
-  await User.create({ email, password: hashed });
+  const hashed = bcrypt.hashSync(req.body.password, 10);
+  const newUser = new User({
+    email: req.body.email,
+    password: hashed,
+  });
+  await newUser.save();
   return res.sendStatus(201);
 };
 
