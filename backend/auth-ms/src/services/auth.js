@@ -20,7 +20,7 @@ const loginUser = async (req, res) => {
   if (!isMatch) {
     throw new Error('Passwords don\'t match');
   } else {
-    const token = jwt.sign({ userDB }, process.env.JWT_SECRET);
+    const token = jwt.sign({ userDB }, process.env.JWT_PRIVATE_KEY);
     return res.json({ token });
   }
 };

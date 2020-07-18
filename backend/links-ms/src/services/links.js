@@ -18,7 +18,7 @@ const createLink = (req, res) => {
   });
 };
 
-const getLinks = async (req, res) => {
+const getLinks = (req, res) => {
   jwt.verify(req.token, process.env.JWT_PRIVATE_KEY, async (err, cred) => {
     if (err) {
       return res.sendStatus(403);
@@ -29,12 +29,20 @@ const getLinks = async (req, res) => {
   });
 };
 
-const updateLink = async (req, res) => {
+const updateLink = (req, res) => {
   res.json({ msg: 'Update link route' });
 };
 
-const deleteLink = async (req, res) => {
-  res.json({ msg: 'Delete link route' });
+const deleteLink = (req, res) => {
+  jwt.verify(req.token, process.env.JWT_PRIVATE_KEY, async (err, cred) => {
+    if (err) {
+      return res.sendStatus(403);
+    }
+    const { _id } = req.params;
+    const userId = cred.userDB._id;
+    await Links.findOneAndRemove(_id).where('user_id').equals(userId).exec();
+    return res.sendStatus(200);
+  });
 };
 
 export {

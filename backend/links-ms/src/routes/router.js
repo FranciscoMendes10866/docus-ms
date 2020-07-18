@@ -11,8 +11,8 @@ router.post('/', authGuard, createLink);
 
 router.get('/', authGuard, getLinks);
 
-router.put('/:id', authGuard, updateLink);
+router.put('/:_id', authGuard, updateLink);
 
-router.delete('/:id', authGuard, deleteLink);
+router.delete('/:_id', authGuard, deleteLink);
 
 export default router;
