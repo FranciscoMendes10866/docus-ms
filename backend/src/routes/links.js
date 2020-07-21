@@ -2,7 +2,7 @@ import express from 'express';
 
 import {
   createLink, updateLink, deleteLink, getLinks,
-} from '../services/links';
+} from '../controllers/links';
 import authGuard from '../guards/token';
 
 const router = express.Router();
