@@ -17,13 +17,13 @@
           <ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
             <li>
               <router-link
-                to="/"
+                to="/signin"
                 class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-blue-500 font-medium"
               >Sign In</router-link>
             </li>
             <li>
               <router-link
-                to="/"
+                to="/signup"
                 class="px-5 py-3 shadow-md lg:ml-5 block bg-blue-500 hover:bg-white text-white hover:text-blue-500 font-medium rounded"
               >Sign Up</router-link>
             </li>

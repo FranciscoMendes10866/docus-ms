@@ -21,7 +21,7 @@
             <div class="mt-16">
               <router-link
                 class="shadown hover:shadow-lg bg-blue-500 hover:bg-white text-white hover:text-blue-500 px-12 py-4 rounded-md"
-                to="/"
+                to="/signup"
               >
                 <span class="font-semibold text-lg inline-block">Sign Up</span>
                 <i class="im im-arrow-right align-middle ml-3 text-md"></i>
@@ -93,7 +93,7 @@
             <div class="mt-16">
               <router-link
                 class="shadown hover:shadow-lg bg-blue-500 hover:bg-white text-white hover:text-blue-500 px-12 py-4 rounded-md"
-                to="/"
+                to="/signup"
               >
                 <span class="font-semibold text-lg inline-block">Sign Up</span>
                 <i class="im im-arrow-right align-middle ml-3 text-md"></i>
