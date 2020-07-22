@@ -1,10 +1,14 @@
-// import ExpressJS from '../../server/Api'
+// import EXPRESS from '../../server/Api'
 // import router from '../../router/index'
 
 export default {
   namespaced: true,
-  state: {},
-  actions: {},
-  getters: {},
-  mutations: {},
-};
+  state: {
+  },
+  actions: {
+  },
+  getters: {
+  },
+  mutations: {
+  }
+}

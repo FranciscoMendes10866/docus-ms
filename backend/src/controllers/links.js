@@ -30,7 +30,15 @@ const getLinks = (req, res) => {
 };
 
 const updateLink = (req, res) => {
-  res.json({ msg: 'Update link route' });
+  jwt.verify(req.token, process.env.JWT_PRIVATE_KEY, async (err, cred) => {
+    if (err) {
+      return res.sendStatus(403);
+    }
+    const { _id } = req.params;
+    const userId = cred.userDB._id;
+    await Links.findOneAndUpdate(_id).where('user_id').equals(userId).exec();
+    return res.sendStatus(200);
+  });
 };
 
 const deleteLink = (req, res) => {

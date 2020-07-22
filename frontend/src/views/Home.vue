@@ -1,16 +1,14 @@
 <template>
-  <div class="home">
-    <HelloWorld/>
+  <div>
+    <Navbar />
+    <h1 class="text-center font-bold tracking-wide">Hello world</h1>
   </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue';
-
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld,
-  },
-};
+  export default {
+    components: {
+      Navbar: () => import('../components/Navbar')
+    }
+  }
 </script>
