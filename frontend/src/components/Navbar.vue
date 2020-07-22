@@ -3,7 +3,7 @@
     <header class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2">
       <div class="flex-1 flex justify-between items-center">
         <router-link to="/">
-          <i class="im im-tags text-2xl text-red-500"></i>
+          <i class="im im-tags text-3xl text-blue-500"></i>
         </router-link>
       </div>
 
@@ -18,13 +18,13 @@
             <li>
               <router-link
                 to="/"
-                class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-red-500 font-medium"
+                class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-blue-500 font-medium"
               >Sign In</router-link>
             </li>
             <li>
               <router-link
                 to="/"
-                class="px-5 py-3 shadow-md lg:ml-5 block bg-red-500 hover:bg-white text-white hover:text-red-500 font-medium rounded"
+                class="px-5 py-3 shadow-md lg:ml-5 block bg-blue-500 hover:bg-white text-white hover:text-blue-500 font-medium rounded"
               >Sign Up</router-link>
             </li>
           </ul>

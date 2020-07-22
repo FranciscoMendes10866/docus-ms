@@ -1,7 +1,18 @@
 <template>
   <div>
-    <router-view/>
+    <Navbar />
+    <router-view />
+    <Footer />
   </div>
 </template>
+
+<script>
+export default {
+  components: {
+    Navbar: () => import('./components/Navbar'),
+    Footer: () => import('./components/Footer')
+  }
+}
+</script>
 
 <style src="./assets/css/styles.main.css"></style>
