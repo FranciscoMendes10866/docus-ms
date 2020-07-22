@@ -7,7 +7,7 @@
             <h1 class="text-center text-3xl mb-10 text-blue-400 font-medium">
               <span class="underline hover:no-underline hover:text-blue-600">Create</span> an account.
             </h1>
-            <Form />
+            <Form :myProps="myProps" />
           </div>
         </div>
       </div>
@@ -17,6 +17,13 @@
 
 <script>
 export default {
+  data: () => {
+    return {
+      myProps: {
+        button: 'Register'
+      }
+    }
+  },
     components: {
         Form: () => import('../components/AuthForm')
     }

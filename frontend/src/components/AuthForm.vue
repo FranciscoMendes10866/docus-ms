@@ -27,7 +27,7 @@
             class="shadow bg-blue-500 hover:bg-white focus:shadow-outline focus:outline-none text-white hover:text-blue-600 font-bold py-2 px-4 rounded"
             type="submit"
           >
-            Create
+            {{ myProps.button }}
             <span>
               <i class="im im-diamond-o align-middle ml-2 text-sm"></i>
             </span>
@@ -40,6 +40,9 @@
 
 <script>
     export default {
+      props: [
+        'myProps'
+      ]
         
     }
 </script>
