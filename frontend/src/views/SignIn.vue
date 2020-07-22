@@ -18,7 +18,7 @@
 <script>
 export default {
     components: {
-        Form: () => import('../components/SignUpForm')
+        Form: () => import('../components/AuthForm')
     }
 }
 </script>
