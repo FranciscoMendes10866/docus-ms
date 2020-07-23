@@ -4,7 +4,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import auth from './modules/auth'
-// import links from './modules/links'
+import links from './modules/links'
 
 Vue.use(Vuex)
 
@@ -15,7 +15,7 @@ export default new Vuex.Store({
   },
   modules: {
     auth,
-    // links
+    links
   },
   plugins: [
     createPersistedState()

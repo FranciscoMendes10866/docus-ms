@@ -4,11 +4,11 @@
       <div class="flex items-center justify-center">
         <div>
           <input
-            :value="emailValue"
-            @input="$emit('emailInput', $event.target.value)"
+            :value="firstInputState"
+            @input="$emit('firstInputMutation', $event.target.value)"
             class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
             id="inline-email"
-            :placeholder="email"
+            :placeholder="firstInputPlc"
             type="text"
           />
         </div>
@@ -16,12 +16,12 @@
       <div class="flex justify-center items-center mt-6">
         <div>
           <input
-            :value="passwordValue"
-            @input="$emit('passwordInput', $event.target.value)"
+            :value="secondInputState"
+            @input="$emit('secondInputMutation', $event.target.value)"
             class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
             id="inline-password"
-            :placeholder="password"
-            type="password"
+            :placeholder="secondInputPlc"
+            :type="myProps.type"
           />
         </div>
       </div>
@@ -46,11 +46,11 @@
     export default {
       props: [
         'myProps',
-        'emailValue',
-        'passwordValue',
-        'email',
-        'password'
+        'firstInputState',
+        'secondInputState',
+        'firstInputPlc',
+        'secondInputPlc',
+        'type'
       ]
-        
     }
 </script>

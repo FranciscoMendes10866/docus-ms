@@ -9,12 +9,12 @@
             </h1>
             <Form
               :myProps="myProps"
-              email="example@gmail.com"
-              password="********"
-              :emailValue="loginEmail"
-              :passwordValue="loginPassword"
-              @emailInput="setLoginEmail"
-              @passwordInput="setLoginPassword"
+              firstInputPlc="example@gmail.com"
+              secondInputPlc="********"
+              :firstInputState="loginEmail"
+              :secondInputState="loginPassword"
+              @firstInputMutation="setLoginEmail"
+              @secondInputMutation="setLoginPassword"
               @submitForm="SignIn"
             />
           </div>
@@ -46,12 +46,13 @@ computed: {
   data: () => {
     return {
       myProps: {
-        button: 'Login'
+        button: 'Login',
+        type: 'password'
       }
     }
   },
     components: {
-        Form: () => import('../components/AuthForm')
+        Form: () => import('../components/Form')
     }
 }
 </script>

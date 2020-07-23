@@ -8,13 +8,13 @@
               <span class="underline hover:no-underline hover:text-blue-600">Create</span> an account.
             </h1>
             <Form
-              email="example@gmail.com"
-              password="********"
               :myProps="myProps"
-              :emailValue="registerEmail"
-              :passwordValue="registerPassword"
-              @emailInput="setRegisterEmail"
-              @passwordInput="setRegisterPassword"
+              firstInputPlc="example@gmail.com"
+              secondInputPlc="********"
+              :firstInputState="registerEmail"
+              :secondInputState="registerPassword"
+              @firstInputMutation="setRegisterEmail"
+              @secondInputMutation="setRegisterPassword"
               @submitForm="SignUp"
             />
           </div>
@@ -46,12 +46,13 @@ export default {
   data: () => {
     return {
       myProps: {
-        button: 'Register'
+        button: 'Register',
+        type: 'password'
       }
     }
   },
     components: {
-        Form: () => import('../components/AuthForm')
+        Form: () => import('../components/Form')
     }
 }
 </script>
